@@ -1,6 +1,8 @@
 1) copy engine_template into engines directory and rename
-2) find and replace engine_template with engine_name
-3) find and replace EngineTemplate with EngineName
-4) run rename.sh engine_name
-5) remove this file
-6) run bundle
+2) run rename_files.sh engine_name
+3) find and replace engine_template with engine_name
+4) find and replace EngineTemplate with EngineName
+5) run bundle
+6) remove this file
+7) remove rename_files.sh
+
