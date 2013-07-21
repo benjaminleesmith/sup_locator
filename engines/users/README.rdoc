@@ -1,0 +1,5 @@
+1) copy users into engines directory and rename
+2) run rename.sh engine_name
+3) find and replace users with engine_name
+4) find and replace Users with EngineName
+5) remove this file
