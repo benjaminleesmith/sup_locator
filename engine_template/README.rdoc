@@ -2,4 +2,5 @@
 2) find and replace engine_template with engine_name
 3) find and replace EngineTemplate with EngineName
 4) run rename.sh engine_name
-4) remove this file
+5) remove this file
+6) run bundle
