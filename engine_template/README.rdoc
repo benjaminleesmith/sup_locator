@@ -1,3 +1,5 @@
-= EngineTemplate
-
-This project rocks and uses MIT-LICENSE.
+1) copy engine_template into engines directory and rename
+2) find and replace engine_template with engine_name
+3) find and replace EngineTemplate with EngineName
+4) run rename.sh engine_name
+4) remove this file
