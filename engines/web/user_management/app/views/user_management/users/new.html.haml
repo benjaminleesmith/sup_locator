@@ -1,0 +1,14 @@
+= form_for(@user) do |f|
+  %label
+    Email
+    = f.text_field(:email)
+
+  %label
+    Password
+    = f.text_field(:password)
+
+  %label
+    Password Confirmation
+    = f.text_field(:password_confirmation)
+
+  = f.submit "Sign Up!"

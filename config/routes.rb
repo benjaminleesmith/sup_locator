@@ -53,4 +53,6 @@ SupLocator::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  mount UserManagement::Engine => "/user_management"
 end
