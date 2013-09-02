@@ -21,3 +21,4 @@ end
 gem "pg"
 gem "haml"
 gem "users", path: "../../domain/users"
+gem "shared_ui", path: "../../web/shared_ui"

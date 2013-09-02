@@ -1,0 +1,24 @@
+%h3 Locations Created by ME!
+
+%div
+  = link_to "New Lake", new_lake_path
+  = link_to "New River", new_river_path
+  = link_to "New Standing Wave", new_standing_wave_path
+  = link_to "New Surf Break", new_surf_break_path
+
+  %table
+    %tr
+      %th
+        Name
+      %th
+        Type
+      %th
+        Actions
+    - @locations.each do |location|
+      %tr
+        %td
+          = location.name
+        %td
+          = location.label
+        %td
+          = link_to "View", view_location_path(location)

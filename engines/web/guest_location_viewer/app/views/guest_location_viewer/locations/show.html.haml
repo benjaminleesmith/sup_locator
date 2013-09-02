@@ -1,0 +1,17 @@
+%h3= @standing_wave.name
+
+- if @standing_wave.description.present?
+  %h4 Description
+  %p= @standing_wave.description
+
+- if @standing_wave.directions.present?
+  %h4 Directions to the Wave
+  %p= @standing_wave.directions
+
+- if @standing_wave.suggested_boards.present?
+  %h4 Suggested Boards
+  %p= @standing_wave.suggested_boards
+
+- if @standing_wave.suggested_skill_level.present?
+  %h4 Suggested Skill Level
+  %p= @standing_wave.suggested_skill_level

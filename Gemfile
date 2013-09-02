@@ -53,3 +53,7 @@ end
 
 gem "users", path: "engines/domain/users"
 gem "user_management", path: "engines/web/user_management"
+gem "user_location_management", path: "engines/web/user_location_management"
+gem "locations", path: "engines/domain/locations"
+gem "shared_ui", path: "engines/web/shared_ui"
+gem "guest_location_viewer", path: "engines/web/guest_location_viewer"

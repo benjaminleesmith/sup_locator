@@ -1,0 +1,35 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/user_location_management/locations" for 127.0.0.1 at 2013-07-23 21:44:57 -0600
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/user_location_management/locations" for 127.0.0.1 at 2013-07-23 21:48:48 -0600
+Processing by UserLocationManagement::LocationsController#index as HTML
+Completed 500 Internal Server Error in 61ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/user_location_management/locations" for 127.0.0.1 at 2013-07-23 21:53:40 -0600
+Processing by UserLocationManagement::LocationsController#index as HTML
+Completed 500 Internal Server Error in 15ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/user_location_management/locations" for 127.0.0.1 at 2013-07-23 21:54:31 -0600
+Processing by UserLocationManagement::LocationsController#index as HTML
+  Rendered /Users/bsmith/workspace/sup_locator/engines/web/user_location_management/app/views/user_location_management/locations/index.html.haml within layouts/user_location_management/application (6.5ms)
+Completed 200 OK in 41ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/user_location_management/locations" for 127.0.0.1 at 2013-07-31 22:21:33 -0600
+Processing by UserLocationManagement::LocationsController#index as HTML
+Redirected to http://www.example.com/
+Filter chain halted as :require_authenicated rendered or redirected
+Completed 302 Found in 42ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2013-07-31 22:21:33 -0600
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m

@@ -9,6 +9,7 @@ module UserManagement
     def create
       @user = Users::User.new(user_params)
       if @user.save
+        session[:user_id] = @user.id
         redirect_back_or_default(new_user_url)
       else
         render "new"

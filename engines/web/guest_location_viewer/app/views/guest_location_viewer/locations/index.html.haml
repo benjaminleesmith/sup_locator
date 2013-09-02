@@ -1,0 +1,8 @@
+%table
+  %tr
+    %th
+      Name
+  - @locations.each do |location|
+    %tr
+      %td
+        = link_to location.name, location_path(location)

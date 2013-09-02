@@ -55,4 +55,6 @@ SupLocator::Application.routes.draw do
   #   end
 
   mount UserManagement::Engine => "/user_management"
+  mount UserLocationManagement::Engine => "/user_location_management"
+  mount GuestLocationViewer::Engine => "/guest_location_viewer"
 end
