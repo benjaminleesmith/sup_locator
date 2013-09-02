@@ -11,10 +11,3 @@
  *= require_self
  *= require_tree .
  */
-
-@font-face {
-    font-family: 'Oswald';
-    src: url('/assets/shared_ui/Oswald-Regular.otf');
-    font-weight: normal;
-    font-style: normal;
-}
