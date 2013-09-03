@@ -16,5 +16,6 @@
 /log/*.log
 /tmp
 */*/*/*/dummy/tmp
+*/*/*/*/dummy/log
 
 .DS_Store
