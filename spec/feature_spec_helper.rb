@@ -6,6 +6,7 @@ require 'capybara/rspec'
 require 'capybara/rails'
 require 'rspec/autorun'
 require "locations/object_creation_methods"
+require "users/object_creation_methods"
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -44,4 +45,5 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.include Locations::ObjectCreationMethods
+  config.include Users::ObjectCreationMethods
 end

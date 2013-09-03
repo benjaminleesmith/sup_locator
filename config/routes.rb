@@ -59,4 +59,6 @@ SupLocator::Application.routes.draw do
   mount GuestLocationViewer::Engine => "/guest_location_viewer"
 
   root "guest_location_viewer/locations#index"
+
+  get "login" => "user_management/sessions#new"
 end
