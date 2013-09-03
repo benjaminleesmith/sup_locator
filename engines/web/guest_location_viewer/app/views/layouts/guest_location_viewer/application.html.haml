@@ -1,0 +1,30 @@
+!!!
+%html
+  %head
+    %meta{:charset => "UTF-8"}/
+    %title SUPLocator | a land locked surfer looking for a fix…
+    = stylesheet_link_tag    "guest_location_viewer/application", media: "all"
+    = javascript_include_tag "guest_location_viewer/application"
+    = csrf_meta_tags
+    = favicon_link_tag "guest_location_viewer/favicon.ico"
+  %body.home.blog.single-author
+    #container
+      #header
+        %h1#site-title
+          %a{:href => "http://suplocator.com/", :rel => "home", :title => "SUPLocator"} SUPLocator
+        %h2#site-description a land locked surfer looking for a fix…
+      #menu
+        %ul
+          %li
+            %a{:href => "http://suplocator.com/", :title => "Home"} Home
+          %li
+            %a{:href => "http://blog.suplocator.com/", :title => "Home"} Blog
+          %li
+            %a{:href => "http://forum.suplocator.com/", :title => "Home"} Forum
+      = yield
+      #footer
+        %a{:href => "http://wordpress.org/", :rel => "generator", :title => "A Semantic Personal Publishing Platform"} Proudly powered by WordPress
+        %span.sep |
+        Theme: Chunk by
+        = succeed "." do
+          %a{:href => "http://automattic.com/", :rel => "designer"} Automattic
