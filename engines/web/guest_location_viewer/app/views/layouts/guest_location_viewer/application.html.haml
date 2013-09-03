@@ -9,6 +9,9 @@
     = favicon_link_tag "guest_location_viewer/favicon.ico"
   %body.home.blog.single-author
     #container
+      #flash
+        - if flash[:notice]
+          .alert-warning= flash[:notice]
       #header
         %h1#site-title
           %a{:href => "http://suplocator.com/", :rel => "home", :title => "SUPLocator"} SUPLocator
