@@ -29,6 +29,8 @@ def engines_that_depend_on(engine_path)
   results
 end
 
+tests_passed = true
+
 changed_engine_paths = []
 changed_files.each do |changed_file|
   DEPENDENCY_TREE.keys.each do |engine_path|
@@ -47,8 +49,10 @@ end
 paths_to_run_tests.flatten.uniq.each do |path_to_run_path_in|
   puts "\nRUNNING TESTS IN #{path_to_run_path_in}"
   # /bin/bash --login &&
-  system "echo \'source ~/.rvm/scripts/rvm && cd #{path_to_run_path_in} && ~/.rvm/scripts/rvm use .rvmrc && rspec spec' | /bin/bash"
+  tests_passed = tests_passed && system("echo \'source ~/.rvm/scripts/rvm && cd #{path_to_run_path_in} && ~/.rvm/scripts/rvm use .rvmrc && rspec spec' | /bin/bash")
 end
 
 puts "\nRUNNING TESTS IN WRAPPER APP"
-system "echo \'source ~/.rvm/scripts/rvm && ~/.rvm/scripts/rvm use .rvmrc && rspec spec' | /bin/bash"
+tests_passed = tests_passed && system("echo \'source ~/.rvm/scripts/rvm && ~/.rvm/scripts/rvm use .rvmrc && rspec spec' | /bin/bash")
+
+exit tests_passed
