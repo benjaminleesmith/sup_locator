@@ -4,6 +4,7 @@ require File.expand_path("../dummy/config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 require "users/object_creation_methods"
+require "locations/object_creation_methods"
 
 require 'rack_session_access/capybara'
 
@@ -44,4 +45,5 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.include Users::ObjectCreationMethods
+  config.include Locations::ObjectCreationMethods
 end
