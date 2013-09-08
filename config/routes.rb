@@ -61,4 +61,5 @@ SupLocator::Application.routes.draw do
   root "guest_location_viewer/locations#index"
 
   get "login" => "user_management/sessions#new"
+  get "sign_up" => "user_management/users#new"
 end

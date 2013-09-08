@@ -14,6 +14,9 @@ describe 'User Signup' do
       click_on "Sign Up!"
 
       page.should have_content("Thanks for signing up!")
+
+      page.should_not have_content "Login"
+      page.should_not have_content "Sign Up"
     end
   end
 end

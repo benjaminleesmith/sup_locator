@@ -24,8 +24,11 @@
             %a{:href => "http://blog.suplocator.com/", :title => "Home"} Blog
           %li
             %a{:href => "http://forum.suplocator.com/", :title => "Home"} Forum
-          %li
-            %a{:href => "/login", :title => "Login"} Login
+          - if !@current_user
+            %li
+              %a{:href => "/login", :title => "Login"} Login
+            %li
+              %a{:href => "/sign_up", :title => "Sign Up"} Sign Up
       = yield
       #footer
         Theme: Chunk by
