@@ -12,6 +12,12 @@ PATH
       bcrypt-ruby (= 3.0.0)
       rails (~> 4.0.0)
 
+PATH
+  remote: ../../web/shared_ui
+  specs:
+    shared_ui (0.0.1)
+      rails (~> 4.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -123,6 +129,7 @@ DEPENDENCIES
   haml
   pg
   rspec-rails (~> 2.0)
+  shared_ui!
   sqlite3
   user_management!
   users!
