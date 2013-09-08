@@ -17,6 +17,11 @@ describe 'User Signup' do
 
       page.should_not have_content "Login"
       page.should_not have_content "Sign Up"
+
+      click_on "Logout"
+
+      page.should have_content "Login"
+      page.should have_content "Sign Up"
     end
   end
 end

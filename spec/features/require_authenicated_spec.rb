@@ -14,7 +14,9 @@ describe "Require Authenication" do
 
     fill_in "Email", with: "test@example.com"
     fill_in "Password", with: "password"
-    click_on "Login"
+    within "form" do
+      click_on "Login"
+    end
 
     visit user_location_management.locations_path
 

@@ -24,7 +24,10 @@
             %a{:href => "http://blog.suplocator.com/", :title => "Home"} Blog
           %li
             %a{:href => "http://forum.suplocator.com/", :title => "Home"} Forum
-          - if !@current_user
+          - if @current_user
+            %li
+              %a{:href => "/logout", :title => "Logout"} Logout
+          - else
             %li
               %a{:href => "/login", :title => "Login"} Login
             %li
