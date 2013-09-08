@@ -45,9 +45,10 @@ changed_engine_paths.each do |changed_engine_path|
 end
 
 paths_to_run_tests.flatten.uniq.each do |path_to_run_path_in|
-  p "RUNNING TESTS IN #{path_to_run_path_in}"
+  puts "\nRUNNING TESTS IN #{path_to_run_path_in}"
   # /bin/bash --login &&
   system "echo \'source ~/.rvm/scripts/rvm && cd #{path_to_run_path_in} && ~/.rvm/scripts/rvm use .rvmrc && rspec spec' | /bin/bash"
 end
 
+puts "\nRUNNING TESTS IN WRAPPER APP"
 system "echo \'source ~/.rvm/scripts/rvm && ~/.rvm/scripts/rvm use .rvmrc && rspec spec' | /bin/bash"
