@@ -96,6 +96,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  shared_ui!
   rspec-rails (~> 2.0)
+  shared_ui!
   sqlite3
