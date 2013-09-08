@@ -31,7 +31,7 @@ module UserLocationManagement
     private
 
     def standing_wave_params
-      params.require(:standing_wave).permit(:name, :description, :suggested_boards, :suggested_skill_level, :directions)
+      params.require(:standing_wave).permit(:name, :description, :suggested_boards, :suggested_skill_level, :directions, :state_abbreviation)
     end
   end
 end

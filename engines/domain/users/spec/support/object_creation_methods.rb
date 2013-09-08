@@ -1,6 +1,6 @@
 module Users
   module ObjectCreationMethods
-    def create_user(params)
+    def create_user(params = {})
       defaults = {
           email: "test@example.com",
           password: "password",

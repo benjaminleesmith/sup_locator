@@ -16,6 +16,7 @@ gemspec
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem "capybara"
+  gem "rack_session_access"
 end
 
 gem "locations", path: "../../domain/locations"

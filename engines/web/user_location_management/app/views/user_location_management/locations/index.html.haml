@@ -19,6 +19,6 @@
         %td
           = location.name
         %td
-          = location.label
+          = "#{location.state_abbreviation}/#{location.label}"
         %td
           = link_to "View", view_location_path(location)
