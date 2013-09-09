@@ -1,10 +1,15 @@
 - content_for :sidebar do
   %h2.entry-title Locations
+- @locations_by_state_abbreviation.keys.reject{|key| key == nil}.sort.each do |state_abbreviation|
+  %h4.entry-title= Locations::Location::STATES[state_abbreviation]
+  %table
+    - @locations_by_state_abbreviation[state_abbreviation].each do |location|
+      %tr
+        %td
+          = link_to location.name, location_path(location)
+%h4.entry-title International/Unknown
 %table
-  %tr
-    %th
-      Name
-  - @locations.each do |location|
+  - (@locations_by_state_abbreviation[nil] || []).each do |location|
     %tr
       %td
         = link_to location.name, location_path(location)

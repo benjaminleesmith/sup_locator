@@ -13,8 +13,12 @@ gemspec
 # To use debugger
 # gem 'debugger'
 
+gem "pg"
+gem "haml"
+
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
+  gem "capybara"
 end
 
 gem "shared_ui", path: "../../web/shared_ui"

@@ -44,6 +44,7 @@ GEM
     mime-types (1.23)
     minitest (4.7.5)
     multi_json (1.7.7)
+    pg (0.16.0)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -97,5 +98,6 @@ PLATFORMS
 
 DEPENDENCIES
   locations!
+  pg
   rspec-rails (~> 2.0)
   sqlite3

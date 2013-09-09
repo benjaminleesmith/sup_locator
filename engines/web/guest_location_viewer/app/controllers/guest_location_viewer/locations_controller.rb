@@ -1,7 +1,7 @@
 module GuestLocationViewer
   class LocationsController < ApplicationController
     def index
-      @locations = Locations::Location.all
+      @locations_by_state_abbreviation = Locations::Location.all_grouped_by_state
     end
 
     def show

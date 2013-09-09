@@ -34,3 +34,11 @@ fieldset label {
 .field_with_errors input {
   border: 1px solid #b94a48;
 }
+
+.main .entry-title {
+ text-align: left;
+}
+
+.entry-meta .entry-title {
+  color: #000;
+}

@@ -5,7 +5,15 @@ module Locations
     end
 
     def create_standing_wave(args)
-      Locations::StandingWave.create!(args)
+      defaults = {
+          name: "standing wave ##{count}"
+      }
+      Locations::StandingWave.create!(defaults.merge(args))
+    end
+
+    def count
+      @@count = 0 unless defined? @@count
+      @@count += 1
     end
   end
 end
