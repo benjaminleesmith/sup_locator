@@ -25,12 +25,14 @@
       #menu
         %ul
           %li
-            %a{:href => "http://suplocator.com/", :title => "Home"} Home
+            %a{:href => "/", :title => "Home"} Home
           %li
-            %a{:href => "http://blog.suplocator.com/", :title => "Home"} Blog
+            %a{:href => "http://blog.suplocator.com/", :title => "Blog"} Blog
           %li
-            %a{:href => "http://forum.suplocator.com/", :title => "Home"} Forum
+            %a{:href => "http://forum.suplocator.com/", :title => "Forum"} Forum
           - if @current_user
+            %li
+              %a{:href => "/profile", :title => "Profile"} Profile
             %li
               %a{:href => "/logout", :title => "Logout"} Logout
           - else

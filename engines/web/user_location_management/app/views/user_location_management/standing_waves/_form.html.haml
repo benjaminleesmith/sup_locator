@@ -1,27 +1,27 @@
 = form_for @standing_wave do |f|
-  %div
+  %fieldset
     = f.label :name
     = f.text_field :name
 
-  %div
-    = f.label :state_abbreviation
-    = f.select :state_abbreviation, Locations::Location::STATES.invert
+  %fieldset
+    = f.label :state_abbreviation, "State"
+    = f.select :state_abbreviation, Locations::Location::STATES.invert, { include_blank: true }
 
-  %div
+  %fieldset
     = f.label :description
-    = f.text_area :description
+    = f.text_area :description, size: "60x3"
 
-  %div
+  %fieldset
     = f.label :directions, "Directions to Wave"
-    = f.text_area :directions
+    = f.text_area :directions, size: "60x3"
 
-  %div
+  %fieldset
     = f.label :suggested_boards, "What boards are best for surfing this wave?"
-    = f.text_area :suggested_boards
+    = f.text_area :suggested_boards, size: "60x3"
 
-  %div
+  %fieldset
     = f.label :suggested_skill_level, "Was is the recommended skill level for this wave (include what flows they apply to)"
-    = f.text_area :suggested_skill_level
+    = f.text_area :suggested_skill_level, size: "60x3"
 
-  %div
+  .form-actions
     = submit_tag "Save"

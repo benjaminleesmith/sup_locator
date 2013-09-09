@@ -63,4 +63,5 @@ SupLocator::Application.routes.draw do
   get "login" => "user_management/sessions#new"
   get "sign_up" => "user_management/users#new"
   get "logout" => "user_management/sessions#destroy"
+  get "profile" => "user_location_management/locations#index"
 end

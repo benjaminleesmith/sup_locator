@@ -1,3 +1,4 @@
-%h3= "Editing #{@standing_wave.name}"
+- content_for :sidebar do
+  %h2.entry-title= "Editing #{@standing_wave.name}"
 
 = render partial: "form"
