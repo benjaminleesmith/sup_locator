@@ -2,7 +2,11 @@
 %html
   %head
     %meta{:charset => "UTF-8"}/
-    %title SUPLocator | a land locked surfer looking for a fix…
+    %title
+      - if content_for?(:title)
+        = "#{yield(:title)} | SUPLocator"
+      - else
+        SUPLocator | a land locked surfer looking for a fix…
     = stylesheet_link_tag    "guest_location_viewer/application", media: "all"
     = javascript_include_tag "guest_location_viewer/application"
     = csrf_meta_tags

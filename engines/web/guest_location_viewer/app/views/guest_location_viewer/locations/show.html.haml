@@ -1,5 +1,6 @@
-%h3= @standing_wave.name
-
+- content_for :title, @standing_wave.name
+- content_for :sidebar do
+  %h2.entry-title= @standing_wave.name
 - if @standing_wave.description.present?
   %h4 Description
   %p= @standing_wave.description
