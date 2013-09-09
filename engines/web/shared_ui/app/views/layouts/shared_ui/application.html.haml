@@ -12,6 +12,8 @@
       #flash
         - if flash[:notice]
           .alert-warning= flash[:notice]
+        - if flash[:error]
+          .alert-danger= flash[:error]
       #header
         %h1#site-title
           %a{:href => "http://suplocator.com/", :rel => "home", :title => "SUPLocator"} SUPLocator
@@ -32,7 +34,12 @@
               %a{:href => "/login", :title => "Login"} Login
             %li
               %a{:href => "/sign_up", :title => "Sign Up"} Sign Up
-      = yield
+      #contents
+        .hentry
+          .entry-meta
+            = yield :sidebar
+          .main
+            = yield
       #footer
         Theme: Chunk by
         = succeed "." do

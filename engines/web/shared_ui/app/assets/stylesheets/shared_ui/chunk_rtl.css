@@ -1,10 +1,10 @@
 /* =RTL
 ----------------------------------------------- */
 #contents {
-    border-left: none;
-    border-right: 1px solid #ccc;
-    margin-left: 0;
-    margin-right: 199px;
+    /*border-left: none;*/
+    /*border-right: 1px solid #ccc;*/
+    /*margin-left: 0;*/
+    /*margin-right: 199px;*/
 }
 
 
@@ -35,15 +35,6 @@
 
 /* =Content
 ----------------------------------------------- */
-.hentry .main {
-    padding: 29px 15px 15px 5px;
-    text-align: right;
-}
-.hentry .entry-meta {
-    float: right;
-    margin: 26px -199px 0 0;
-    text-align: left;
-}
 .entry-title {
     margin: 5px 0px 15px 0px;
     text-align: right;

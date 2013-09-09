@@ -1,11 +1,13 @@
+- content_for :sidebar do
+  %h2.entry-title Login
 = form_tag sessions_path  do
-  %div
-    %label
+  %fieldset
+    %label{for: "email"}
       Email
-      = text_field_tag :email
-  %div
-    %label
+    = text_field_tag :email
+  %fieldset
+    %label{for: "password"}
       Password
-      = password_field_tag :password
-  %div
+    = password_field_tag :password
+  .form-actions
     = submit_tag "Login"

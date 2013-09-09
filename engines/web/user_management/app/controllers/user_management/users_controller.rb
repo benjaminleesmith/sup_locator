@@ -14,6 +14,7 @@ module UserManagement
         flash[:notice] = "Thanks for signing up!"
         redirect_back_or_default(new_user_url)
       else
+        flash.now[:error] = "We were unable to create an account for you."
         render "new"
       end
     end

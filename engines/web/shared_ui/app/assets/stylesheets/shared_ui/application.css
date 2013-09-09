@@ -18,3 +18,19 @@
   padding: 10px;
   font-size: 16px;
 }
+
+fieldset label {
+  display: block;
+}
+
+.form-actions {
+  padding-top: 10px;
+}
+
+.field_with_errors {
+  color: #b94a48;
+}
+
+.field_with_errors input {
+  border: 1px solid #b94a48;
+}

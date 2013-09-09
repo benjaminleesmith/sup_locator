@@ -1,14 +1,24 @@
+- content_for :sidebar do
+  %h2.entry-title Create Account
 = form_for(@user) do |f|
-  %label
-    Email
+  - if @user.errors.any?
+    .has-error
+      .help-block= "#{pluralize(@user.errors.count, "error")} kept us from creating you an account:"
+      %ul.help-block
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+
+  %fieldset
+    = f.label :email
     = f.text_field(:email)
 
-  %label
-    Password
+  %fieldset
+    = f.label :password
     = f.password_field(:password)
 
-  %label
-    Password Confirmation
+  %fieldset
+    = f.label :password_confirmation, "Password Confirmation"
     = f.password_field(:password_confirmation)
 
-  = f.submit "Sign Up!"
+  .form-actions
+    = f.submit "Sign Up!"

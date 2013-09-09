@@ -11,6 +11,7 @@ module UserManagement
         session[:user_id] = user.id
         redirect_to "/"
       else
+        flash[:error] = "Your email and password did not match. Please try again."
         render "new"
       end
     end
