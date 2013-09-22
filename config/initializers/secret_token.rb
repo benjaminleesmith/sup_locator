@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-SupLocator::Application.config.secret_key_base = '80fa01d9b6131e0d58889de961cfb8bae0678277effcbcb170f8aacd027084df954064d4f337c6e6466b7250633af08c104e1fd5882086a874bfedb0107d19ca'
+SupLocator::Application.config.secret_key_base = ENV['SECRET_KEY_BASE'] || 'shhdonttell'
