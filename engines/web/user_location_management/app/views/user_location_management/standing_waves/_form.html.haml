@@ -1,3 +1,7 @@
+:javascript
+  $(function () {
+    new UserLocationManagement.Views.YoutubeUrls({el: "#youtube_urls"}).render();
+  });
 = form_for @standing_wave do |f|
   %fieldset
     = f.label :name
@@ -22,6 +26,8 @@
   %fieldset
     = f.label :suggested_skill_level, "Was is the recommended skill level for this wave (include what flows they apply to)"
     = f.text_area :suggested_skill_level, size: "60x3"
+
+  %fieldset#youtube_urls
 
   .form-actions
     = submit_tag "Save"

@@ -10,4 +10,9 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require user_location_management/underscore
+//= require user_location_management/backbone
+//= require user_location_management/backbone_rails_sync
+//= require user_location_management/backbone_datalink
+//= require user_location_management/backbone/user_location_management
 //= require_tree .

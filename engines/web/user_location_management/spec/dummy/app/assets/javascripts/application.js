@@ -10,4 +10,6 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require user_location_management/application
 //= require_tree .
+//= require_self

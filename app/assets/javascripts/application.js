@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require user_location_management/application
 //= require_tree .
+//= require_self
