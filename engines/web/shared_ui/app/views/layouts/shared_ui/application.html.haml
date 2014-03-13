@@ -4,9 +4,9 @@
     %meta{:charset => "UTF-8"}/
     %title
       - if content_for?(:title)
-        = "#{yield(:title)} | SUPLocator"
+        = "#{yield(:title)} | SUP for the Soul"
       - else
-        SUPLocator | a land locked surfer looking for a fix…
+        SUP for the Soul | a land locked surfer looking for a fix…
     = stylesheet_link_tag    "guest_location_viewer/application", media: "all"
     = javascript_include_tag "guest_location_viewer/application"
     = csrf_meta_tags
@@ -20,16 +20,16 @@
           .alert-danger= flash[:error]
       #header
         %h1#site-title
-          %a{:href => "http://suplocator.com/", :rel => "home", :title => "SUPLocator"} SUPLocator
+          %a{:href => "http://supforthesoul.com/", :rel => "home", :title => "SUP for the Soul"} SUP for the Soul
         %h2#site-description a land locked surfer looking for a fix…
       #menu
         %ul
           %li
             %a{:href => "/", :title => "Home"} Home
           %li
-            %a{:href => "http://blog.suplocator.com/", :title => "Blog"} Blog
+            %a{:href => "http://blog.supforthesoul.com/", :title => "Blog"} Blog
           %li
-            %a{:href => "http://forum.suplocator.com/", :title => "Forum"} Forum
+            %a{:href => "http://forum.supforthesoul.com/", :title => "Forum"} Forum
           - if @current_user
             %li
               %a{:href => "/profile", :title => "Profile"} Profile
