@@ -13,8 +13,8 @@ describe "Location Management" do
     fill_in "Description", with: "Sweet spot brah!"
     select "Colorado", from: "State"
 
-    fill_in "Youtube URL", with: "http://www.youtube.com/watch?v=vwJY50YtZHU"
-    click_on "Add More"
+    # fill_in "Youtube URL", with: "http://www.youtube.com/watch?v=vwJY50YtZHU"
+    # click_on "Add More"
 
     click_on "Save"
 
