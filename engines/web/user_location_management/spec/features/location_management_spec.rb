@@ -42,7 +42,7 @@ describe "Location Management" do
   end
 
   it "allows users to delete locations" do
-    create_standing_wave name: "Wave to be deleted", user_id: user.id
+    location = create_standing_wave name: "Wave to be deleted", user_id: user.id
 
     visit user_location_management.locations_path
 
@@ -50,6 +50,14 @@ describe "Location Management" do
 
     click_on "Delete"
 
+    page.should have_content("Are you sure you want to delete 'Wave to be deleted'?")
+
+    select "Duplicate or Bad information", from: "Reason for Deletion"
+
+    click_on "Confirm Delete"
+
     page.should_not have_content("Wave to be deleted")
+
+    location.reload.deletion_reason.should == "BD"
   end
 end

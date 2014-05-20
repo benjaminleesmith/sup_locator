@@ -15,10 +15,36 @@ describe Locations::Location do
   end
 
   describe "defaults" do
-    it "sets the deleted flag to false" do
+    it "sets the deletion reason to nil" do
       location = Locations::Location.create({name: "test location"})
 
-      location.deleted.should == false
+      location.deletion_reason.should == nil
+    end
+  end
+
+  describe "validations" do
+    describe "deletion_reason" do
+      it "validates that the value is a valid reason" do
+        Locations::Location::DELETION_REASON_CODES.keys.each do |reason_code|
+          location = Locations::Location.new({name: "test location", deletion_reason: reason_code})
+          location.valid?.should == true
+        end
+
+        location = Locations::Location.new({name: "test location", deletion_reason: nil})
+        location.valid?.should == true
+
+        location = Locations::Location.new({name: "test location", deletion_reason: "BAD_CODE"})
+        location.valid?.should == false
+      end
+    end
+
+    describe "name" do
+      it "validates presence of name" do
+        location = Locations::Location.new({name: nil})
+
+        location.valid?.should == false
+        location.errors[:name].present?.should == true
+      end
     end
   end
 end

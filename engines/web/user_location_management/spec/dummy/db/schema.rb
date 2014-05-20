@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140520150435) do
+ActiveRecord::Schema.define(version: 20140520173307) do
 
   create_table "locations_locations", force: true do |t|
     t.string   "type"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20140520150435) do
     t.text     "suggested_skill_level"
     t.text     "directions"
     t.string   "state_abbreviation",    default: ""
-    t.boolean  "deleted",               default: false
+    t.string   "deletion_reason"
   end
 
   create_table "users_users", force: true do |t|

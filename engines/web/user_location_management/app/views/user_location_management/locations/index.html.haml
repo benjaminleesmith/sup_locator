@@ -21,4 +21,4 @@
         %td
           = link_to "View", view_location_path(location)
           = link_to "Edit", edit_standing_wave_path(location)
-          = button_to "Delete", location_path(location), :method=>:delete, :class=>:destroy
+          = link_to "Delete", destroy_confirmation_location_path(location)
