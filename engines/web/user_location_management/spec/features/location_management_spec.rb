@@ -1,10 +1,13 @@
 require "spec_helper"
 
 describe "Location Management" do
-  it "allows users to create locations" do
-    user = create_user
-    page.set_rack_session(:user_id => user.id)
+  let(:user) { create_user }
 
+  before do
+    page.set_rack_session(:user_id => user.id)
+  end
+
+  it "allows users to create locations" do
     visit user_location_management.locations_path
 
     click_on "New Standing Wave"
@@ -23,9 +26,7 @@ describe "Location Management" do
   end
 
   it "allows users to edit locations" do
-    user = create_user
     create_standing_wave name: "Old Wave", user_id: user.id
-    page.set_rack_session(:user_id => user.id)
 
     visit user_location_management.locations_path
 
@@ -38,5 +39,17 @@ describe "Location Management" do
     click_on "Save"
 
     page.should have_content("New Wave")
+  end
+
+  it "allows users to delete locations" do
+    create_standing_wave name: "Wave to be deleted", user_id: user.id
+
+    visit user_location_management.locations_path
+
+    page.should have_content("Wave to be deleted")
+
+    click_on "Delete"
+
+    page.should_not have_content("Wave to be deleted")
   end
 end

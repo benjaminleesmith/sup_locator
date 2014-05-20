@@ -13,4 +13,12 @@ describe Locations::Location do
       }
     end
   end
+
+  describe "defaults" do
+    it "sets the deleted flag to false" do
+      location = Locations::Location.create({name: "test location"})
+
+      location.deleted.should == false
+    end
+  end
 end

@@ -46,4 +46,5 @@ RSpec.configure do |config|
 
   config.include Users::ObjectCreationMethods
   config.include Locations::ObjectCreationMethods
+  config.include EngineControllerTestMonkeyPatch, :type => :controller
 end
